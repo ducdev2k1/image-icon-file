@@ -1,5 +1,5 @@
 {
-  "name": "@ducdev2k1/image-file-icon",
+  "name": "@ducdev2k1/file-icon",
   "description": "A Vue 3 component library for file icons",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist-lib"
   ],
   "scripts": {
     "dev": "vite",
@@ -42,6 +42,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "rollup-plugin-dts": "^6.2.1",
+    "vite-plugin-dts": "^2.0.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vue-tsc": "^2.2.4"

@@ -1,6 +1,81 @@
-# Vue 3 + TypeScript + Vite
+# File Thumbnail Icon Component
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## English
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
-# image-icon-file
+### Description
+
+This component displays a file thumbnail icon based on the file name.
+
+### Installation
+
+Ensure you have Vue 3 installed. Then, install the package via npm:
+
+```sh
+npm install @ducdev2k1/file-icon
+```
+
+Then, import the component in your project.
+
+### Usage
+
+```vue
+<script setup lang="ts">
+  import FileThumbnailIcon from '@ducdev2k1/file-icon';
+</script>
+
+<template>
+  <FileThumbnailIcon nameFile="document.pdf" alt="PDF File" class="icon" />
+</template>
+```
+
+### Props
+
+| Prop     | Type   | Required | Description                          |
+| -------- | ------ | -------- | ------------------------------------ |
+| nameFile | String | Yes      | The name of the file to get the icon |
+| alt      | String | No       | Alternative text for the image       |
+
+### Attributes
+
+This component supports all native `<img>` attributes via `$attrs`.
+
+---
+
+## Tiếng Việt
+
+### Mô tả
+
+Component này hiển thị icon thumbnail của file dựa vào tên file.
+
+### Cài đặt
+
+Hãy đảm bảo bạn đã cài đặt Vue 3. Sau đó, cài đặt package qua npm:
+
+```sh
+npm install @ducdev2k1/file-icon
+```
+
+Sau đó, import component vào dự án của bạn.
+
+### Cách sử dụng
+
+```vue
+<script setup lang="ts">
+  import FileThumbnailIcon from '@ducdev2k1/file-icon';
+</script>
+
+<template>
+  <FileThumbnailIcon nameFile="document.pdf" alt="Tệp PDF" class="icon" />
+</template>
+```
+
+### Props
+
+| Prop     | Kiểu   | Bắt buộc | Mô tả                             |
+| -------- | ------ | -------- | --------------------------------- |
+| nameFile | String | Có       | Tên của tệp để lấy icon tương ứng |
+| alt      | String | Không    | Văn bản thay thế cho hình ảnh     |
+
+### Thuộc tính
+
+Component này hỗ trợ tất cả các thuộc tính của thẻ `<img>` thông qua `$attrs`.

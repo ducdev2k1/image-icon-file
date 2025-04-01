@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { getThumbnailIcon } from '../utils/useFileIcon';
+  import { getThumbnailIcon } from './useFileIcon';
+  import { computed, defineComponent } from 'vue';
 
   defineComponent({
     inheritAttrs: false,
@@ -14,8 +15,6 @@
 
   const nameFile = computed(() => props.nameFile);
   const alt = computed(() => props.alt);
-
-  const;
 </script>
 
 <template>

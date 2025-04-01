@@ -1,11 +1,15 @@
 {
   "name": "@ducdev2k1/image-file-icon",
   "description": "A Vue 3 component library for file icons",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/my-file-icon-lib.git"
+    "url": "https://github.com/ducdev2k1/image-icon-file.git"
   },
+  "bugs": {
+    "url": "https://github.com/ducdev2k1/image-icon-file/issues"
+  },
+  "homepage": "https://github.com/ducdev2k1/image-icon-file#readme",
+  "author": "ducdev2k1",
   "keywords": [
     "vue",
     "icon",
@@ -27,7 +31,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build --mode lib",
     "preview": "vite preview",
-    "publish": "npm run build && npm publish --access public"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "vue": "^3.5.13",

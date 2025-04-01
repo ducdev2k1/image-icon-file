@@ -1,0 +1,45 @@
+{
+  "name": "@ducdev2k1/image-file-icon",
+  "description": "A Vue 3 component library for file icons",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/my-file-icon-lib.git"
+  },
+  "keywords": [
+    "vue",
+    "icon",
+    "file",
+    "file-icon",
+    "library",
+    "icon file office"
+  ],
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build --mode lib",
+    "preview": "vite preview",
+    "publish": "npm run build && npm publish --access public"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "mime": "^4.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vue-tsc": "^2.2.4"
+  }
+}

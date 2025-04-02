@@ -34,7 +34,14 @@ jobs:
         run: |
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
           -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-          -d text="🎉 Package đã được publish lên npm thành công! Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}"
+          -d text="🎉 Package đã được publish lên npm thành công! \n Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}"
+          -d link="https://github.com/${{ github.repository }}"
+        if: error()
+        run: | 
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+          -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+          -d text="❌ Package không được publish lên npm! \n Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}"
+          -d link="https://github.com/${{ github.repository }}"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

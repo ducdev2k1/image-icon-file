@@ -19,7 +19,7 @@ export function getThumbnailIcon(fileName: string) {
 
   // Hàm phụ trợ để trả về đường dẫn icon
   // const getIconPath = (iconName: string) => `${iconBasePath}/${iconName}`;
-  const getIconPath = (iconName: string) => new URL(`${iconBasePath}/${iconName}`, import.meta.url).href;
+  const getIconPath = (iconName: string) => new URL(`${iconBasePath}/${iconName}`, import.meta.url).toString();
 
   // Trường hợp thư mục hoặc type không xác định
   //   if (item.isDirectory) {

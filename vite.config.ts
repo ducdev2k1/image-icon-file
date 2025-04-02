@@ -17,6 +17,9 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
         },
+        assetFileNames: (assetInfo) => {
+          return `assets/[name][extname]`;
+        },
       },
     },
   },

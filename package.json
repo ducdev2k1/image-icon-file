@@ -1,13 +1,14 @@
 {
   "name": "@ducdev2k1/file-icon",
   "description": "A Vue 3 component library for file icons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "./dist/file-icon.umd.js",
   "module": "./dist/file-icon.es.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "assets"
   ],
   "repository": {
     "type": "git",

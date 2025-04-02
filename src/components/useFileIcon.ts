@@ -15,10 +15,11 @@ export function actionGetMimeType(path: string) {
 export function getThumbnailIcon(fileName: string) {
   const type = fileName.split('.').pop() as string;
   const mimeTypeValue = actionGetMimeType(type);
-  const iconBasePath = `../assets/icons/office`;
+  const iconBasePath = `./assets/icons/office`;
 
   // Hàm phụ trợ để trả về đường dẫn icon
-  const getIconPath = (iconName: string) => `${iconBasePath}/${iconName}`;
+  // const getIconPath = (iconName: string) => `${iconBasePath}/${iconName}`;
+  const getIconPath = (iconName: string) => new URL(`${iconBasePath}/${iconName}`, import.meta.url).href;
 
   // Trường hợp thư mục hoặc type không xác định
   //   if (item.isDirectory) {

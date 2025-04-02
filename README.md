@@ -25,15 +25,19 @@ Then, import the component in your project.
 
 <template>
   <FileThumbnailIcon nameFile="document.pdf" alt="PDF File" class="icon" />
+
+  <!--Folder-->
+  <FileThumbnailIcon nameFile="document" isDirectory alt="Folder" class="icon" />
 </template>
 ```
 
 ### Props
 
-| Prop     | Type   | Required | Description                          |
-| -------- | ------ | -------- | ------------------------------------ |
-| nameFile | String | Yes      | The name of the file to get the icon |
-| alt      | String | No       | Alternative text for the image       |
+| Prop        | Type    | Required | Description                          |
+| ----------- | ------- | -------- | ------------------------------------ |
+| nameFile    | String  | Yes      | The name of the file to get the icon |
+| isDirectory | Boolean | No       | Return icon folder                   |
+| alt         | String  | No       | Alternative text for the image       |
 
 ### Attributes
 
@@ -66,15 +70,19 @@ Sau đó, import component vào dự án của bạn.
 
 <template>
   <FileThumbnailIcon nameFile="document.pdf" alt="Tệp PDF" class="icon" />
+
+  <!--Folder-->
+  <FileThumbnailIcon nameFile="document" isDirectory alt="Folder" class="icon" />
 </template>
 ```
 
 ### Props
 
-| Prop     | Kiểu   | Bắt buộc | Mô tả                             |
-| -------- | ------ | -------- | --------------------------------- |
-| nameFile | String | Có       | Tên của tệp để lấy icon tương ứng |
-| alt      | String | Không    | Văn bản thay thế cho hình ảnh     |
+| Prop        | Kiểu    | Bắt buộc | Mô tả                             |
+| ----------- | ------- | -------- | --------------------------------- |
+| nameFile    | String  | Có       | Tên của tệp để lấy icon tương ứng |
+| isDirectory | Boolean | No       | Trả về icon Thư mục               |
+| alt         | String  | Không    | Văn bản thay thế cho hình ảnh     |
 
 ### Thuộc tính
 

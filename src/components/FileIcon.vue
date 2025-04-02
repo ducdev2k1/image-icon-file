@@ -8,6 +8,7 @@
 
   interface Props {
     nameFile: string;
+    isDirectory?: boolean;
     alt?: string;
   }
 
@@ -15,8 +16,12 @@
 
   const nameFile = computed(() => props.nameFile);
   const alt = computed(() => props.alt);
+  const isDirectory = computed(() => props.isDirectory || false);
 </script>
 
 <template>
-  <img v-bind="$attrs" :src="getThumbnailIcon(nameFile)" :alt="alt || nameFile" />
+  <img
+    v-bind="$attrs"
+    :src="getThumbnailIcon({ fileName: nameFile, isDirectory: isDirectory })"
+    :alt="alt || nameFile" />
 </template>

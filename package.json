@@ -6,13 +6,6 @@
   "main": "./dist/file-icon.umd.js",
   "module": "./dist/file-icon.es.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/file-icon.es.js",
-      "require": "./dist/file-icon.umd.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "files": [
     "dist"
   ],

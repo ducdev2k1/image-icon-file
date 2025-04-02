@@ -35,10 +35,10 @@ jobs:
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
             -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
             -d parse_mode=HTML \
-            -d text="✅ Package đã được publish lên npm thành công!<br>
-            Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}<br>
-            Repository: <a href='https://github.com/${{ github.repository }}'>https://github.com/${{ github.repository }}</a><br>
-            Workflow Run: <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}</a>"
+            -d text="✅ Package đã được publish lên npm thành công!%0A
+              Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}%0A
+              Repository: <a href='https://github.com/${{ github.repository }}'>https://github.com/${{ github.repository }}</a>%0A
+              Workflow Run: <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}</a>"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -49,10 +49,10 @@ jobs:
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
             -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
             -d parse_mode=HTML \
-            -d text="❌ Publish package lên NPM thất bại!<br>
-            Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}<br>
-            Repository: <a href='https://github.com/${{ github.repository }}'>https://github.com/${{ github.repository }}</a><br>
-            Workflow Run: <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}</a>"
+            -d text="❌ Publish package lên NPM thất bại!%0A
+              Tên package: ${{ github.repository }} - Commit: ${{ github.sha }}%0A
+              Repository: <a href='https://github.com/${{ github.repository }}'>https://github.com/${{ github.repository }}</a>%0A
+              Workflow Run: <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}</a>"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
